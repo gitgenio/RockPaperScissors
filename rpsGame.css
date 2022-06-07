@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+main{
+    display: grid;
+    background-color: aqua;
+    margin: 0 auto;
+    padding: 30px;
+    height: 100vh;
+}
+.cabeza{
+    display: grid;
+    grid-template-columns:  1fr 3fr;
+    grid-template-rows: 1fr;
+    height: 20vh;
+    padding: 10px 80px;
+}
+
+ .comentario{ 
+width: 100%;
+margin-bottom: 20px;
+}
+.burbuja{
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    color: #222;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    margin-left:-30px;
+    border-radius: 10px;
+    border: solid rgb(222, 201, 201);
+}
+p{     
+    margin: 0 0 10px 0;
+    font-size: 3rem;
+    text-align: center;
+    color: rgb(30, 44, 30);   
+    object-fit: contain;
+}
+
+.burbuja:after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    margin-left: -45px;
+    width: 0;
+    height: 0;
+    border-top:18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-right:  25px solid  #fff;    
+}
+.comp{   
+    width: 80%;
+    height: 80%;
+  object-fit: contain;
+}
+.images{
+    display: grid;
+    height: 50vh;
+    background-color: transparent;   
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+.paper{
+    display: grid;
+    justify-items:  center;
+}
+  #idPaper{
+    width: 60%;
+  } 
+ 
