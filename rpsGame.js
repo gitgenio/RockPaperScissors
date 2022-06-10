@@ -1,28 +1,46 @@
-window.onload = begin;
-var rps = "";
 
+var optUser = 0;
+
+const changeNumber = (number) => {  
+   localStorage.keepNum = number; 
+}
+
+
+
+ const objStone = {
+   img : '<a href="/rpsgamePage2.html"  > <img src="./img/stone.jpg"> </a>',
+   num :1,
+ };
+ const objPaper = {
+   img : '<a href="/rpsgamePage2.html" >  <img  src="./img/paper.jpg" > </a> ',
+   num :2,
+ };
+ const objScissors = {
+   img : '<a href="/rpsgamePage2.html">   <img  src="./img/scissors.webp" > </a> ',
+   num :3,
+ };
+
+
+   let contain = document.querySelector(".images");
+
+   let divStone = document.createElement("div");
+   // la función toma el dato cuando le hacen click
+   divStone.addEventListener("click", () => changeNumber(objStone.num));
+   // No sirve,  la función toma el dato de la ultima vez que se ejecuta
+   // divStone.addEventListener("click", changeNumber(objStone.num));   
+   divStone.innerHTML = objStone.img;
+   contain.appendChild(divStone);
+
+   let divPaper = document.createElement("div");
+   divPaper.addEventListener("click", () => changeNumber(objPaper.num));
+   divPaper.innerHTML = objPaper.img;
+   contain.appendChild(divPaper);
+
+   let divScissors = document.createElement("div");
+   divScissors.addEventListener("click", () => changeNumber(objScissors.num));
+   divScissors.innerHTML = objScissors.img;
+   contain.appendChild(divScissors);
+
+
+   // localStorage.keepNum = optUser;
  
-function begin(){ 
-let rock = document.querySelector(".stone");
-rock.addEventListener("click", funcRock);
-let paper = document.querySelector(".paper");
-// var paper = document.getElementById("idPaper");
-paper.addEventListener("click", funcPaper);
-let scissors = document.querySelector(".scissors");
-scissors.addEventListener("click", funcScissors);
-}
-
-function funcRock(){
-   rps = "stone";  
-//    alert("itssss optcomp: " +optComp);     
-}
-function funcPaper(){
-   rps = "paper"; 
-   console.log(rps); 
-}
-function funcScissors(){
-   rps = "scissors";  
-   console.log(rps);
-   //alert(rps);     
-}
-//onsole.log(rps);
