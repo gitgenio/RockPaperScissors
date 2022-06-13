@@ -1,38 +1,52 @@
 
 const optComp = Math.floor( Math.random() * ( 4 - 1 ) ) + 1; 
-const contenedor = document.querySelector(".container");
-const contenedor2 = document.querySelector(".container2"); 
-alert(" localStorage.keepNum2:  "+ localStorage.keepNum);
+const contenedorUser = document.querySelector(".containUser");
+const contenedorComp = document.querySelector(".containerComp"); 
+let img = "";
+let img2 = "";
+let img3 = "";
+
 
 switch(optComp){
     case 1 :
-    img = "<img class='imgRock' src='./img/stone.jpg'>";
+    img = "<img class='rockWin' src='./img/stone.jpg'>";
     break;
     case 2 :
-    img = "<img class='imgPaper' src='./img/paper.jpg'>";
+    img = "<img class='paperWin' src='./img/paper.jpg'>";
     break;
     case 3 :
-    img = "<img class='imgScissors' src='./img/scissors.webp'>";
-    break;
-}
-switch(optUser){
-    case 1 :
-    img2 = "<img class='imgRock' src='./img/stone.jpg'>";
-    break;
-    case 2 :
-    img2 = "<img class='imgPaper' src='./img/paper.jpg'>";
-    break;
-    case 3 :
-    img2 = "<img class='imgScissors' src='./img/scissors.webp'>";
+    img = "<img class='scissorsWin' src='./img/scissors.webp'>";
     break;
 }
 
-img2 = "<img class='imgScissors' src='./img/scissors.webp'>";
+let optUser = parseInt(localStorage.keepNum);
+switch(optUser){
+    case 1 :
+    img2 = "<img class='rockWin' src='./img/stone.jpg'>";
+    break;
+    case 2 :
+    img2 = "<img class='paperWin' src='./img/paper.jpg'>";
+    break;
+    case 3 :
+    img2 = "<img class='scissorsWin' src='./img/scissors.webp'>";
+    break;
+}
+
 let div = document.createElement("div");
 div.innerHTML = img2;
-contenedor.appendChild(div);
+contenedorUser.appendChild(div);
 
 let div2 = document.createElement("div");
 div2.innerHTML = img;
-contenedor2.appendChild(div2);
+contenedorComp.appendChild(div2);
 
+ let result = document.getElementById("containerResult");
+
+if(optUser == optComp ){ 
+    result.innerHTML = '<img class="result" src="./img/Dead-Heat.webp" alt="deadHeat"> '; 
+}else if(optUser == 1 && optComp == 3 || optUser == 2 && optComp == 1 
+    || optUser == 3 && optComp == 2 ){
+        result.innerHTML = '<img class="result" src="./img/win.png" alt="resultWin"> ';
+    }else {
+         result.innerHTML = '<img class="result" src="./img/lost2.jpg" alt="resultLost">';
+         }

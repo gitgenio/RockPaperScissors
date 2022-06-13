@@ -1,18 +1,14 @@
 
-var optUser = 0;
-
 const changeNumber = (number) => {  
    localStorage.keepNum = number; 
 }
-
-
 
  const objStone = {
    img : '<a href="/rpsgamePage2.html"  > <img src="./img/stone.jpg"> </a>',
    num :1,
  };
  const objPaper = {
-   img : '<a href="/rpsgamePage2.html" >  <img  src="./img/paper.jpg" > </a> ',
+   img : '<a class="paper" href="/rpsgamePage2.html" >  <img  id="idPaper" src="./img/paper.jpg" > </a> ',
    num :2,
  };
  const objScissors = {
@@ -41,6 +37,4 @@ const changeNumber = (number) => {
    divScissors.innerHTML = objScissors.img;
    contain.appendChild(divScissors);
 
-
-   // localStorage.keepNum = optUser;
- 
+   
