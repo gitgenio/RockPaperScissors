@@ -1,44 +1,30 @@
-
+let optUser = parseInt(localStorage.keepNum);
 const optComp = Math.floor( Math.random() * ( 4 - 1 ) ) + 1; 
 const contenedorUser = document.querySelector(".containUser");
 const contenedorComp = document.querySelector(".containerComp"); 
 let img = "";
 let img2 = "";
-let img3 = "";
 
-
-switch(optComp){
+function res(option, image, contain){
+switch(option){
     case 1 :
-    img = "<img class='rockWin' src='./img/stone.jpg'>";
+        image = "<img class='rockWin' src='./img/stone.jpg'>";
     break;
     case 2 :
-    img = "<img class='paperWin' src='./img/paper.jpg'>";
+        image = "<img class='paperWin' src='./img/paper.jpg'>";
     break;
     case 3 :
-    img = "<img class='scissorsWin' src='./img/scissors.webp'>";
-    break;
-}
-
-let optUser = parseInt(localStorage.keepNum);
-switch(optUser){
-    case 1 :
-    img2 = "<img class='rockWin' src='./img/stone.jpg'>";
-    break;
-    case 2 :
-    img2 = "<img class='paperWin' src='./img/paper.jpg'>";
-    break;
-    case 3 :
-    img2 = "<img class='scissorsWin' src='./img/scissors.webp'>";
+        image = "<img class='scissorsWin' src='./img/scissors.webp'>";
     break;
 }
 
 let div = document.createElement("div");
-div.innerHTML = img2;
-contenedorUser.appendChild(div);
+div.innerHTML = image;
+contain.appendChild(div);
 
-let div2 = document.createElement("div");
-div2.innerHTML = img;
-contenedorComp.appendChild(div2);
+}
+res(optUser, img, contenedorUser);
+res(optComp, img2, contenedorComp);
 
  let result = document.getElementById("containerResult");
 
