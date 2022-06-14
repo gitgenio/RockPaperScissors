@@ -79,7 +79,15 @@ img {
     display: grid;
     justify-items:  center;
 }
+
   #idPaper{
     width: 60%;
   } 
+  .scissors{
+    display: grid;
+    justify-items:  center;
+}
+  #idScissors{
+    width: 60%;
+}
  

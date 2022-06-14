@@ -8,13 +8,13 @@ let img2 = "";
 function res(option, image, contain){
 switch(option){
     case 1 :
-        image = "<img class='rockWin' src='./img/stone.jpg'>";
+        image = "<img class='rockWin' src='./img/happyStone.jpg'>";
     break;
     case 2 :
-        image = "<img class='paperWin' src='./img/paper.jpg'>";
+        image = "<img class='paperWin' src='./img/happyPaper.jpg'>";
     break;
     case 3 :
-        image = "<img class='scissorsWin' src='./img/scissors.webp'>";
+        image = "<img class='scissorsWin' src='./img/happyScissors.jpg'>";
     break;
 }
 
