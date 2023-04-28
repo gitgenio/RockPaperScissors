@@ -4,15 +4,15 @@ const changeNumber = (number) => {
 }
 
  const objStone = {
-   img : '<a href="/rpsgamePage2.html"  > <img src="./img/happyStone.jpg"> </a>',
+   img : '<a href="./rpsgamePage2.html"  > <img src="./img/happyStone.jpg"> </a>',
    num :1,
  };
  const objPaper = {
-   img : '<a class="paper" href="/rpsgamePage2.html" >  <img  id="idPaper" src="./img/happyPaper.jpg" > </a> ',
+   img : '<a class="paper" href="./rpsgamePage2.html" >  <img  id="idPaper" src="./img/happyPaper.jpg" > </a> ',
    num :2,
  };
  const objScissors = {
-   img : '<a class="scissors" href="/rpsgamePage2.html">   <img  id="idScissors"  src="./img/happyScissors.jpg" > </a> ',
+   img : '<a class="scissors" href="./rpsgamePage2.html">   <img  id="idScissors"  src="./img/happyScissors.jpg" > </a> ',
    num :3,
  };
 
