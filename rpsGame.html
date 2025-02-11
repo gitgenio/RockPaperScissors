@@ -2,24 +2,35 @@
 <html lang="en">
 
 <head>
+    <!-- Configuración del conjunto de caracteres y compatibilidad con navegadores -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Enlace a la hoja de estilos externa -->
     <link rel="stylesheet" href="rpsGame.css">
+
     <title>rpsGame</title>
 </head>
 
 <body>
     <main>
+        <!-- Sección de la parte superior que contiene una imagen y un mensaje -->
         <section class="cabeza">
+            <!-- Imagen de computadora  -->
             <img class="comp" src="./img/angryComp.png" alt="angryComp">
-            <div class="comentario burbuja">
-                <p> push your option...</p>
-            </div>
 
+            <!-- Burbuja de diálogo con un mensaje de selección -->
+            <div class="comentario burbuja">
+                <p> Choose your option...</p>
+            </div>
         </section>
-        <section class="images">  </section>
+
+        <!-- Sección vacía donde se agregaran desde .js las opciones del juego -->
+        <section class="images"> </section>
     </main>
+
+    <!-- Inclusión de los scripts de JavaScript para la funcionalidad del juego -->
     <script src="./rpsGame.js"> </script>
     <script src="./rpsGame2.js"> </script>
 </body>
