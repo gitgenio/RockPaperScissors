@@ -76,7 +76,7 @@ p{
 /* Contenedor de las imágenes de las opciones del juego */
 .images{
     display: grid;
-    height: 70vh;
+    height: 40vh;
     background-color: transparent;   
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -91,24 +91,47 @@ img {
     object-fit: contain;
 }
 
-/* Centra el elemento de la opción 'Papel' */
-.paper{
+/* Centra el elemento  */
+.paper .scissors .rock{
     display: grid;
     justify-items: center;
 }
 
-/* Ajusta el tamaño de la imagen de 'Papel' */
-#idPaper{
-    width: 60%;
+/* Ajusta el tamaño de la imagen  */
+#idPaper, #idScissors{
+    width: 50%;
 } 
-
-/* Centra el elemento de la opción 'Tijeras' */
-.scissors{
-    display: grid;   
-    justify-items: center;
-}
-
-/* Ajusta el tamaño de la imagen de 'Tijeras' */
-#idScissors{
+#idRock {
     width: 60%;
 }
+
+.score {
+    text-align: center;
+    font-size: 2rem;    
+}
+
+.counters-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+  }
+
+  .score p{
+    margin-left: 30rem;
+    margin-right: 30rem;
+    color: rgb(9, 57, 21);
+  }
+
+ #reboot{ 
+    text-align: center;       
+  }
+
+  button {   
+    padding: 10px 20px;
+    font-size: 2rem;
+    background-color: rgb(219, 100, 100);   
+    cursor: pointer;
+    border-radius: 10%;
+    transition: background-color 0.3s ease;
+  }
