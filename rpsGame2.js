@@ -1,3 +1,4 @@
+
 // Se inicializan userWins y pcWins con los valores almacenados en localStorage, si existen.
 let userWins = localStorage.keepUserWins ? parseInt(localStorage.keepUserWins) : 0;
 let pcWins = localStorage.keepPcWins ? parseInt(localStorage.keepPcWins) : 0;
@@ -59,21 +60,21 @@ let result = document.getElementById("containerResult");
 /* Lógica para determinar el resultado del juego */
 if (optUser == optComp) {
   result.innerHTML =
-    '<img class="result" src="./img/Dead-Heat.webp" alt="deadHeat"> ';
+    '<img class="result" src="./img/Dead-Heat.webp" alt="deadHeat">';
 } else if (
   (optUser == 1 && optComp == 3) ||
   (optUser == 2 && optComp == 1) ||
   (optUser == 3 && optComp == 2)
 ) {
   userBool = true;
-  result.innerHTML =
-    '<img class="result" src="./img/win.png" alt="resultWin"> ';  
   userWins += 1; // Usuario gana una ronda 
+  result.innerHTML =
+    '<img class="result" src="./img/win.png" alt="resultWin">';    
 } else {
   compBool = true;
-  result.innerHTML =
-    '<img class="result" src="./img/lost2.jpg" alt="resultLost">';
   pcWins += 1; // PC gana una ronda 
+  result.innerHTML =
+    '<img class="result" src="./img/lost2.jpg" alt="resultLost">';  
 }
 
 /* Llamada a la función para mostrar las imágenes correspondientes */
@@ -82,6 +83,7 @@ res(optComp, contenedorComp, compBool);
 
 // Actualizar puntajes después de cada ronda
 updateScores();
+
 
 
 
