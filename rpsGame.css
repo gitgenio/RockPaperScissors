@@ -64,7 +64,6 @@ main {
 }
 /* Estilos del texto dentro de la burbuja */
 p {
-  margin: 0 0 10px 0;
   font-size: 2rem;
   text-align: center;
   color: rgb(237, 9, 9);
@@ -177,7 +176,7 @@ button {
     width: 60%;
   }
   .score {
-    margin-top: 100px;
+    margin-top: 20vh;
   }
   .score p {
     margin-left: 30rem;
