@@ -3,17 +3,17 @@ let contPc = localStorage.keepPcWins;
 // containerResult
 /* Objetos que representan las opciones del juego (piedra, papel y tijeras) */
 const objStone = {
-  img: '<a class="rock" href="./rpsgamePage2.html"  > <img id="idRock" src="./img/stone/happyStone.png"> </a>',
+  img: '<a  href="./rpsgamePage2.html"  > <img id="idRock" src="./img/stone/happyStone.png"> </a>',
   num: 1,
 };
 
 const objPaper = {
-  img: '<a class="paper" href="./rpsgamePage2.html" >  <img  id="idPaper" src="./img/paper/happyPaper.png" > </a> ',
+  img: '<a  href="./rpsgamePage2.html" >  <img  id="idPaper" src="./img/paper/happyPaper.png" > </a> ',
   num: 2,
 };
 
 const objScissors = {
-  img: '<a class="scissors" href="./rpsgamePage2.html">   <img  id="idScissors"  src="./img/scissors/happyScissors.png" > </a> ',
+  img: '<a  href="./rpsgamePage2.html">   <img  id="idScissors"  src="./img/scissors/happyScissors.png" > </a> ',
   num: 3,
 };
 
@@ -29,6 +29,7 @@ function postImg() {
 
   /* Creación del elemento para la opción 'Piedra' */
   let divStone = document.createElement("div");
+  divStone.classList.add("rock");
   // cuando se hace click almacena el dato en el local storage
   divStone.addEventListener("click", () => changeNumber(objStone.num));
   divStone.innerHTML = objStone.img;
@@ -36,12 +37,14 @@ function postImg() {
 
   /* Creación del elemento para la opción 'Papel' */
   let divPaper = document.createElement("div");
+  divPaper.classList.add("paper");
   divPaper.addEventListener("click", () => changeNumber(objPaper.num));
   divPaper.innerHTML = objPaper.img;
   contain.appendChild(divPaper);
 
   /* Creación del elemento para la opción 'Tijeras' */
   let divScissors = document.createElement("div");
+  divScissors.classList.add("scissors");
   divScissors.addEventListener("click", () => changeNumber(objScissors.num));
   divScissors.innerHTML = objScissors.img;
   contain.appendChild(divScissors);
