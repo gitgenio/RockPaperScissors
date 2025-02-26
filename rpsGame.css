@@ -1,125 +1,189 @@
 /* Reset de estilos para eliminar márgenes y paddings predeterminados */
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 /* Define el tamaño base de la fuente para facilitar cálculos en rem */
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
-body{
-    background-color: aqua;
+body {
+  background-color: aqua;
 }
 main {
-    display: grid;   
-    grid-template-rows:  repeat(5, 1fr);
-    grid-template-areas: 
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
     "cabeza"
-    "images"    
-    "images"    
+    "images"
+    "images"
     "score"
     "reebot";
+  height: 100vh;
 }
-.cabeza{   
-    grid-area: cabeza;
-    display: flex;
-    height: 20vh; 
+.cabeza {
+  grid-area: cabeza;
+  display: flex;
+  height: 20vh;
 }
 /* Imagen del personaje computador*/
-.comp{   
-    width: 30vh;
-    height: 80%;
-   margin: 10px;
-    object-fit: contain;
+.comp {
+  width: 30vh;
+  height: 80%;
+  margin: 10px;
+  object-fit: contain;
 }
-.comentario{ 
-    width: 100%;
+.comentario {
+  width: 100%;
 }
-.burbuja{
-    position: relative;
-    background-color: #fff; 
-    padding: 5px;
-    color: #222;
-    margin-top: 10px;
-    margin-right: 20px;
-    height: 70px;
-    min-width: 100px; /* Ancho mínimo */
-    max-width: 1200px; /* Ancho máximo */
-    border-radius: 10px;
-    border: solid rgb(222, 201, 201);
-} 
+.burbuja {
+  position: relative;
+  background-color: #fff;
+  padding: 15px;
+  color: #222;
+  margin-top: 10px;
+  margin-right: 20px;
+  height: 70px;
+  min-width: 100px; /* Ancho mínimo */
+  max-width: 1200px; /* Ancho máximo */
+  border-radius: 10px;
+  border: solid rgb(222, 201, 201);
+}
 /* Flecha decorativa de la burbuja */
-.burbuja:after{
-    content: "";
-    position: absolute;
-    top: 15px;
-    margin-left: -30px;
-    width: 0;
-    height: 0;
-    border-top:18px solid transparent;
-    border-bottom: 18px solid transparent;
-    border-right:  25px solid  #fff;    
+.burbuja:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  margin-left: -30px;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-right: 25px solid #fff;
 }
 /* Estilos del texto dentro de la burbuja */
-p{     
-    margin: 0 0 10px 0;
-    font-size: 2rem;
-    text-align: center;
-    color: rgb(237, 9, 9);   
-    object-fit: contain;
+p {
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+  text-align: center;
+  color: rgb(237, 9, 9);
+  object-fit: contain;
 }
 /* Contenedor de las imágenes de las opciones del juego */
- .images{
-    grid-area: images;
-    display: grid;    
-    grid-template-columns: 1fr, 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
+.images {
+  grid-area: images;
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
     "rock rock"
     "paper scissors";
-    align-items: baseline;
-    justify-items: center;
-   height: 20vh;    
+  align-items: baseline;
+  justify-items: center;
+  height: 25vh;
 }
-
 .rock {
-    grid-area: rock; 
+  grid-area: rock;
 }
-.paper { 
-    grid-area: paper;     
-} 
-.scissors { 
-    grid-area: scissors; 
+.paper {
+  grid-area: paper;
 }
-#idRock, #idPaper, #idScissors{
- width: 100px;  
+.scissors {
+  grid-area: scissors;
+}
+#idRock,
+#idPaper,
+#idScissors {
+  width: 100px;
 }
 .score {
-    grid-area: score;
+  grid-area: score;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+.score p {
+  margin-left: 6rem;
+  margin-right: 10rem;
+  color: rgb(9, 57, 21);
+}
+.counters-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+#reboot {
+  text-align: center;
+}
+button {
+  padding: 10px 20px;
+  font-size: 2rem;
+  background-color: rgb(219, 100, 100);
+  cursor: pointer;
+  border-radius: 10%;
+  transition: background-color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "cabeza"
+      "images"
+      "score"
+      "reebot";
+  }
+  .cabeza {
+    height: 30vh;
+  }
+  /* Imagen del personaje computador*/
+  .comp {
+    width: 20%;
+    margin: 20px;
+  }
+  .burbuja {
+    margin-top: 50px;
+    margin-left: -30px;
+    margin-right: 10vh;
+  }
+  /* Flecha decorativa de la burbuja */
+  .burbuja:after {
+    margin-left: -45px;
+  }
+  /* Estilos del texto dentro de la burbuja */
+  p {
+    font-size: 3rem;
+  }
+  /* Contenedor de las imágenes de las opciones del juego */
+  .images {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "rock paper scissors";
     text-align: center;
-    font-size: 2rem;   
-    margin-top: 20px; 
-}  
-.score p{
-    margin-left: 6rem;
-    margin-right: 10rem;
-    color: rgb(9, 57, 21);
+  }
+  /* Estilos generales para todas las imágenes */
+  img {
+    width: 85%;
+    height: 90%;
+  }
+  /* Ajusta el tamaño de la imagen  */
+  #idPaper,
+  #idScissors {
+    width: 50%;
+  }
+  #idRock {
+    width: 60%;
+  }
+  .score {
+    margin-top: 100px;
+  }
+  .score p {
+    margin-left: 30rem;
+    margin-right: 30rem;
   }
   .counters-container {
-    display: flex;
-    justify-content:space-between;
-    margin-top: 5px;    
+    margin-top: 10px;
   }
- #reboot{ 
-    text-align: center;       
-  }
-  button {   
-    padding: 10px 20px;
-    font-size: 2rem;
-    background-color: rgb(219, 100, 100);   
-    cursor: pointer;
-    border-radius: 10%;
-    transition: background-color 0.3s ease;
 }
-  
